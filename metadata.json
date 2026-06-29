@@ -1,0 +1,10 @@
+{
+  "name": "LifePilot Copilot AI",
+  "description": "AI-Powered Adaptive Productivity and Life Management Assistant",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

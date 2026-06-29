@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", Georgia, serif;
+
+  --color-primary-50: #f5f3ff;
+  --color-primary-100: #ede9fe;
+  --color-primary-200: #ddd6fe;
+  --color-primary-500: #8b5cf6;
+  --color-primary-600: #7c3aed;
+  --color-primary-700: #6d28d9;
+}
+
+/* Base Theme Property Declarations */
+:root {
+  --bg-app: #FFFFFF;
+  --bg-card: #F8FAFC;
+  --bg-card-secondary: #F1F5F9;
+  --text-main: #111827;
+  --text-muted: #64748B;
+  --border-app: #E2E8F0;
+  --accent-color: #2563EB;
+  --accent-color-hover: #1d4ed8;
+  --shadow-app: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --backdrop-blur-app: 0px;
+}
+
+.dark {
+  --bg-app: #0A0A0A;
+  --bg-card: #151515;
+  --bg-card-secondary: #1E1E1E;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --border-app: rgba(255, 255, 255, 0.06);
+  --accent-color: #8B5CF6;
+  --accent-color-hover: #3B82F6;
+  --shadow-app: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Master body element skinning */
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-app) !important;
+  color: var(--text-main) !important;
+  overflow-x: hidden;
+  min-height: 100vh;
+  transition: background 300ms ease-in-out, color 300ms ease-in-out, border-color 300ms ease-in-out;
+}
+
+/* Theme Fonts Overrides */
+.theme-cyber {
+  font-family: var(--font-mono) !important;
+}
+.theme-academic {
+  font-family: var(--font-serif) !important;
+}
+
+/* Dynamic Card Background Overrides */
+.bg-white, 
+.bg-slate-50, 
+.bg-slate-100, 
+.bg-slate-200, 
+.bg-slate-800, 
+.bg-slate-900, 
+.bg-slate-950,
+.dark .bg-slate-900, 
+.dark .bg-slate-950, 
+.bg-white\/70, 
+.bg-white\/40, 
+.bg-white\/80,
+.bg-white\/30,
+.dark .bg-slate-900\/40, 
+.dark .bg-slate-950\/40,
+.dark .bg-slate-950\/65,
+.bg-indigo-950\/40,
+.bg-slate-900\/50,
+.bg-slate-900\/40,
+.backdrop-blur-xl,
+.backdrop-blur-md,
+aside,
+header {
+  background: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-app) !important;
+  box-shadow: var(--shadow-app) !important;
+  transition: background 300ms ease-in-out, color 300ms ease-in-out, border-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
+}
+
+/* Backdrop filters only on Glass styles */
+.theme-glass .bg-white, 
+.theme-glass .bg-white\/70,
+.theme-glass .bg-white\/40,
+.theme-glass .bg-white\/80,
+.theme-glass .bg-white\/30,
+.theme-glass .dark .bg-slate-900\/40,
+.theme-glass .dark .bg-slate-950\/65,
+.theme-glass aside,
+.theme-glass header {
+  backdrop-filter: blur(var(--backdrop-blur-app)) !important;
+  -webkit-backdrop-filter: blur(var(--backdrop-blur-app)) !important;
+}
+
+/* Secondary nested containers */
+.bg-slate-100\/50,
+.bg-slate-100\/80,
+.bg-slate-50\/50,
+.bg-slate-50\/40,
+.bg-slate-950\/20,
+.bg-slate-900\/20,
+.dark .bg-slate-900\/20,
+.bg-slate-100\/30,
+.dark .bg-slate-950\/20,
+.bg-indigo-500\/10,
+.dark .bg-indigo-500\/20,
+.bg-indigo-600\/10,
+.dark .bg-indigo-500\/20,
+.bg-slate-50,
+.dark .bg-slate-950 {
+  background: var(--bg-card-secondary) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-app) !important;
+}
+
+/* Dialogue overlays and modals */
+.fixed.inset-0.bg-slate-900\/20, 
+.fixed.inset-0.bg-slate-900\/40, 
+.fixed.inset-0.bg-black\/50,
+.fixed.inset-0.bg-black\/60,
+.bg-slate-900\/20 {
+  background-color: rgba(0, 0, 0, 0.45) !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+/* Form inputs & controls */
+input, select, textarea {
+  background-color: var(--bg-card-secondary) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-app) !important;
+  border-radius: 12px;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent-color) !important;
+  outline: none;
+}
+input::placeholder, textarea::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 0.6;
+}
+
+/* Borders overrides */
+.border,
+.border-t,
+.border-b,
+.border-l,
+.border-r,
+.border-slate-100,
+.border-slate-200,
+.border-slate-300,
+.border-slate-700,
+.border-slate-800,
+.border-white\/5,
+.border-white\/10,
+.border-white\/20,
+.border-slate-700\/50,
+.dark .border-white\/5,
+.dark .border-white\/10,
+.dark .border-white\/20,
+.border-slate-200\/50 {
+  border-color: var(--border-app) !important;
+}
+
+/* Typography Text Overrides */
+.text-slate-900,
+.text-slate-800,
+.text-slate-700,
+.text-slate-600,
+.dark .text-slate-100,
+.dark .text-slate-200,
+.dark .text-slate-300,
+.text-slate-950,
+.text-gray-900,
+.dark .text-gray-100,
+.text-white {
+  color: var(--text-main) !important;
+}
+
+/* Secondary & Muted Typography */
+.text-slate-500,
+.text-slate-400,
+.dark .text-slate-400,
+.dark .text-slate-500,
+.text-gray-500,
+.dark .text-gray-400 {
+  color: var(--text-muted) !important;
+}
+
+/* Dynamic Accent Highlight Overrides (globally matching buttons, rings, badges) */
+.bg-indigo-600, 
+.bg-indigo-500, 
+.bg-violet-600, 
+.bg-violet-500,
+.dark .bg-indigo-600, 
+.dark .bg-violet-600,
+.bg-indigo-600\/10,
+.dark .bg-indigo-500\/20 {
+  background-color: var(--accent-color) !important;
+  color: #ffffff !important;
+}
+
+.bg-indigo-600\/10,
+.dark .bg-indigo-500\/20 {
+  background-color: rgba(var(--accent-color), 0.1) !important;
+  color: var(--accent-color) !important;
+}
+
+.hover\:bg-indigo-700:hover, 
+.hover\:bg-indigo-600:hover, 
+.hover\:bg-violet-700:hover, 
+.hover\:bg-violet-600:hover,
+.dark .hover\:bg-indigo-700:hover, 
+.dark .hover\:bg-violet-700:hover {
+  background-color: var(--accent-color-hover) !important;
+}
+
+.text-indigo-600, 
+.text-indigo-500, 
+.text-indigo-400,
+.text-indigo-700,
+.text-violet-600, 
+.text-violet-500, 
+.text-violet-400,
+.dark .text-indigo-400, 
+.dark .text-indigo-300,
+.dark .text-violet-400, 
+.dark .text-violet-300 {
+  color: var(--accent-color) !important;
+}
+
+.border-indigo-600, 
+.border-indigo-500, 
+.border-violet-600, 
+.border-violet-500,
+.dark .border-indigo-500, 
+.dark .border-violet-500,
+.border-indigo-500\/20,
+.border-indigo-500\/10 {
+  border-color: var(--accent-color) !important;
+}
+
+.ring-indigo-600, 
+.ring-indigo-500, 
+.ring-violet-600, 
+.ring-violet-500,
+.focus\:ring-indigo-500:focus, 
+.focus\:ring-violet-500:focus,
+.focus\:ring-indigo-600:focus {
+  --tw-ring-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+}
+
+/* Progress bars global gradient highlight overrides */
+.bg-gradient-to-r.from-indigo-500.to-purple-500,
+.bg-gradient-to-r.from-indigo-600.to-violet-600,
+.bg-gradient-to-tr.from-indigo-500.to-purple-500,
+.bg-gradient-to-r.from-indigo-500.to-purple-600 {
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-color-hover)) !important;
+}
+
+/* Micro-animations and transitions */
+.animations-enabled * {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms !important;
+}
+
+/* Reduced Motion specifications */
+.reduced-motion *, 
+.reduced-motion *::before, 
+.reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Material scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-app);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* Pulse animation for voice assistant mic */
+@keyframes voice-ripple {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 12px rgba(139, 92, 246, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+  }
+}
+
+.animate-voice-ripple {
+  animation: voice-ripple 1.8s infinite ease-in-out;
+}
