@@ -1,20 +1,46 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# LifePilot Copilot
 
-# Run and deploy your AI Studio app
+AI-powered productivity companion helping users plan, prioritize and complete tasks before deadlines are missed.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/be69496b-19b8-4ef0-946d-cc913cc4ebaf
+- AI Voice Companion
+- Focus Mode
+- Panic Mode
+- Growth Hub
+- Adaptive Scheduling
+- Smart Commitments
+- Gamification
+- Learning Explorer
+- Interactive Classroom
+- Soundscapes
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+React
 
+TypeScript
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+TailwindCSS
+
+Vite
+
+Gemini API
+
+Google AI Studio
+
+Google Cloud Platform
+
+Cloud Run
+
+## Deployment
+
+https://lifepilot-copilot-381287140994.asia-southeast1.run.app
+
+## Future Directions
+
+- Enhanced voice intelligence
+- Calendar integrations
+- Persistent AI memory
+- Mobile experience
+- Context-aware recommendations
