@@ -33,11 +33,11 @@ Google Cloud Platform
 
 Cloud Run
 
-## Deployment
+## Deployment 
 
 https://lifepilot-copilot-381287140994.asia-southeast1.run.app
 
-##Demo Video
+## Demo Video Link
 
 https://drive.google.com/file/d/1VCw-axLsqGWTw-66sJJbChpQcMerjdDF/view?usp=sharing
 
